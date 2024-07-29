@@ -1,1 +1,1 @@
-![Plot](newplot.png)
+![Plot](./exportGraphs/newplot.png)
