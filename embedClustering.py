@@ -14,11 +14,11 @@ def average_embeddings(embeddings):
     return averaged_embeddings 
 
 def tsneReduceEMB(averaged_embeddings):
-    tsne = TSNE(n_components=2)
+    tsne = TSNE(n_components=2, **kwargs)
     reduced_embeddings = tsne.fit_transform(averaged_embeddings)
     return reduced_embeddings
     
-def findEPS(reduced_embeddings, k):
+def findEPS(reduced_embeddings, k=4):
     neigh = NearestNeighbors(n_neighbors=k)
     nbrs = neigh.fit(reduced_embeddings)
     distances, indices = nbrs.kneighbors(reduced_embeddings)
@@ -34,7 +34,7 @@ def findEPS(reduced_embeddings, k):
     optimal_eps = distances[kneedle.elbow]
     return optimal_eps
 
-def dbscanEMB(reduced_embeddings, eps=1.8, min_samples=2):
+def dbscanEMB(reduced_embeddings, eps=1.8, min_samples=4):
     db = DBSCAN(eps=eps, min_samples=min_samples).fit(reduced_embeddings)
     labels = db.labels_
 
@@ -46,7 +46,7 @@ def dbscanEMB(reduced_embeddings, eps=1.8, min_samples=2):
 
     return labels
 
-def hdbscanEMB(reduced_embeddings, min_samples=5):
+def hdbscanEMB(reduced_embeddings, min_samples=4):
     db = HDBSCAN(min_samples=min_samples).fit(reduced_embeddings)
     labels = db.labels_
 
