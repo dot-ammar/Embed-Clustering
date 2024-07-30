@@ -10,4 +10,4 @@ Capturing and analyzing the semantic differences in perspectives that are natura
 ![Plot](./exportClusters/cluster1.png)
 
 
-[HTML](./exportClusters/interactive_plot1.html)
+Download Interactive Graph: [./exportCluster/interactive_plot1.html](exportClusters/interactive_plot1.html)
