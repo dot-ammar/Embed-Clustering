@@ -1,2 +1,2 @@
 # Embed Clustering
-![Plot](./exportGraphs/newplot.png)
+![Plot](./exportGraphs/cluster1.png)
