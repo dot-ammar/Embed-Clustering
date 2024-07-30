@@ -14,7 +14,7 @@ def average_embeddings(embeddings):
     return averaged_embeddings 
 
 def tsneReduceEMB(averaged_embeddings):
-    tsne = TSNE(n_components=2, **kwargs)
+    tsne = TSNE(n_components=2)
     reduced_embeddings = tsne.fit_transform(averaged_embeddings)
     return reduced_embeddings
     
