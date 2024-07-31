@@ -4,6 +4,7 @@
 /venv
 /chroma_data
 .vscode
+interactive_plot*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
